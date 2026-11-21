@@ -12,7 +12,6 @@ jobs:
       packages: write      # push to ghcr.io/ethpandaops
       id-token: write      # attest, and authenticate to the image mirror
       attestations: write
-    # The image mirror only accepts attestations made on GitHub-hosted runners.
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.attest.outputs.image }}
